@@ -1,0 +1,670 @@
+css
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: white;
+    color: black;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+    
+    
+    
+    
+    
+    
+
+}
+
+
+/* 
+   HEADER
+  */
+.top-gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 120px;
+
+    background: linear-gradient(
+        to bottom,
+        darkgray,
+        transparent
+    );
+
+    z-index: 1;
+    pointer-events: none;
+}
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 70px;
+
+    z-index: 100;
+
+    color: white;
+    background: transparent;
+}
+
+.header-inner {
+    width: calc(100% - 10%);
+    max-width: 1500px;
+    height: 100%;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+    
+}
+
+nav a {
+    
+    color: white;
+    text-decoration: none;
+}
+
+
+
+
+
+/* =========================
+   BILD-BEREICH
+   ========================= */
+
+.background {
+    position: relative;
+    height: 100vh;
+    background: black;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    
+}
+
+
+.background img {
+    position: absolute;
+
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 100%;
+    min-width: 2160px;
+    height: auto;
+
+    display: block;
+}
+.hero {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    z-index: 2;
+
+    text-align: center;
+    color: white;
+
+    width: 100%;
+}
+.hero2 {
+    position: absolute;
+
+    top: 80%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    z-index: 2;
+
+    text-align: center;
+    color: white;
+
+    width: 100%;
+}
+
+.hero h1 {
+    margin: 0;
+   font-size: clamp(74px, 8vw, 96px);
+   transform: scaleY(0.9);
+    line-height: 0.95;
+    font-weight: 1000;
+    letter-spacing: -0.04em;
+}
+
+.hero2 h1 {
+    margin-bottom: 1vh;
+    
+
+    font-size: clamp(18px, 1.5vw, 28px);
+    transform: scaleY(0.9);
+    line-height: 1.2;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+
+}
+.white-background {
+    
+    background: white;
+}
+#Projekte {
+    padding: 120px 40px;
+    
+}
+
+#Projekte > h1 {
+    text-align: center;
+    margin: 0 0 4% 0;
+    font-size: clamp(14px, 2vw, 18px);
+    font-weight: 900;
+}
+
+.project {
+    position: relative;
+
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+
+    align-items: center;
+    color: black;
+    text-decoration: none;
+
+    width: 100%;
+    
+    margin: 0 auto;
+
+    padding: 0 0 0 0;
+
+    overflow: visible;
+
+   
+}
+.project img {
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 100vw;
+    height: 30vh;
+
+    object-fit: cover;
+    z-index: 99;
+
+    opacity: 0;
+    pointer-events: none;
+
+    transition: opacity 0.3s ease;
+}
+.project:hover img {
+    opacity: 1;
+}
+
+.project h2 {
+    margin: 0;
+
+    text-align: center;
+
+    font-size: clamp(40px, 7vw, 96px);
+    transform: scaleY(0.9);
+    font-weight: 900;
+    letter-spacing: -0.04em;
+}
+
+.semester {
+    margin: 0;
+    text-align: right;
+    padding-right: 30px;
+
+    font-size: 16px;
+}
+
+.details {
+    margin: 0;
+    text-align: left;
+    padding-left: 30px;
+
+    font-size: 16px;
+}
+
+.hover-semester,
+.hover-title,
+.hover-details {
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    z-index: 100;
+    color: white;
+
+    
+
+   
+}
+/*.hover-semester {
+    grid-column: 1;
+    margin: 0;
+    text-align: right;
+    padding-right: 30px;
+    
+
+    font-size: 16px;
+}*/
+
+.hover-title {
+    grid-column: 2;
+    margin: 0;
+
+    text-align: center;
+
+    font-size: clamp(40px, 7vw, 96px);
+    transform: scaleY(0.9);
+    font-weight: 900;
+    letter-spacing: -0.04em;
+}
+
+.hover-details {
+    grid-column: 3;
+    margin: 0;
+    text-align: left;
+    padding-left: 30px;
+
+    font-size: 16px;
+}
+
+.project:hover .hover-semester,
+.project:hover .hover-title,
+.project:hover .hover-details {
+    opacity: 1;
+}
+#Projekte > h3 {
+    text-align: center;
+    margin: 5% 0 0 0;
+    font-size: clamp(12px, 2vw, 16px);
+    text-decoration: underline;
+    font-weight: 200;
+}
+#Projekte > h3 a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+
+.weiter1 {
+    text-align: center;
+    
+    background: whitesmoke;
+    padding: 100px 40px;
+}
+
+.weiter1 h1 {
+    color: black;
+}
+
+.weiter1 p {
+    color: black;
+    margin: 4% 24% 4% 24%
+}
+
+/* =========================
+   ABOUT
+   ========================= */
+
+#about {
+    width: 100%;
+    padding: 3% 0 1% 0;
+
+    background: black;
+    color: white;
+}
+
+.about-inner {
+    
+    max-width: 1500px;
+    margin: 0 auto;
+
+    text-align: center;
+    font-size: clamp(40px, 5vw, 75px);
+    font-weight: 200;
+    transform: scaleY(0.9);
+}
+
+
+
+/* =========================
+   CONTACT
+   ========================= */
+
+#contact {
+    width: 100%;
+    padding: 3% 0 2% 0;
+
+    background: black;
+    color: white;
+}
+
+.contact-inner {
+    width: calc(100% - 10%);
+    max-width: 1500px;
+    
+    margin: 0 auto;
+}
+
+#contact a {
+    color: white;
+    text-decoration: none;
+}
+
+    
+
+
+/* =========================
+   FOOTER
+   ========================= */
+
+footer {
+    width: 100%;
+    padding: 40px 0;
+
+    background: black;
+    color: gray;
+
+    font-size: clamp(11px, 1vw, 12px);
+    font-weight: 200;
+    
+}
+
+.footer-inner {
+    width: calc(100% - 10%);
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+/*--------------------------------------------------
+Klangkoerper
+----------------------------------------------------*/
+.klangbackground {
+    position: relative;
+    height: 80vh;
+    background: black;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    
+}
+
+
+.klangbackground img {
+    position: absolute;
+
+    top: -10%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 100%;
+    min-width: 2160px;
+    height: auto;
+
+    display: block;
+}
+.klanghero {
+    position: absolute;
+    top: 93%;
+
+    left: 50%;
+    width: calc(100% - 10%);
+    max-width: 1500px;
+
+    transform: translateX(-50%);
+
+    z-index: 2;
+    text-align: left;
+    color: white;
+}
+
+.klanghero h1 {
+    margin: 0;
+    font-size: clamp(64px, 8vw, 64px);
+    line-height: 0.95;
+    font-weight: 1000;
+    letter-spacing: -0.04em;
+}
+
+.klangwhite-background {
+    background: white;
+    padding: 120px 40px;
+}
+
+.klang-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 80px;
+
+    width: calc(100% - 10%);
+    max-width: 1500px;
+    margin: 0 auto;
+}
+.klang-grid > div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.klang-grid p {
+    margin: 0 0 10px 0;
+    text-align: left;
+    font-size: clamp(12px, 1.5vw, 20px);
+}
+.klang-grid p2 {
+    margin: 0 0 0 0;
+    text-align: left;
+    font-size: clamp(12px, 1.5vw, 20px);
+    font-weight: 600;
+}
+
+.bilder-background {
+    width: 100%;
+    background: black;
+    padding: 30px 0;
+}
+
+.Bilderreihe1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+
+    width: calc(100% - 10%);
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.Bilderreihe1 .bild {
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+}
+
+.Bilderreihe1 img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+.Bilderreihe1 .bild:hover img {
+    position: fixed;
+
+    width: auto;
+    height: auto;
+
+    max-width: 1500px;
+    max-height: 90vh;
+
+    object-fit: contain;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    z-index: 100;
+}
+
+
+
+.mehrprojekte-background {
+    width: 100%;
+    background: white;
+    padding: 0 0;
+}
+
+.mehrprojekte-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+
+    width: calc(100% - 10%);
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+
+
+
+
+
+.stadtgartenbackground {
+    position: relative;
+    height: 80vh;
+    background: black;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    
+}
+
+.stadtgartenbackground img {
+    position: absolute;
+
+    top: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 100%;
+    min-width: 2160px;
+    height: auto;
+
+    display: block;
+}
+.stadtgartenhero {
+    position: absolute;
+
+    top: 93%;
+    left: 53%;
+
+    transform: translate(-50%, -50%);
+
+    z-index: 2;
+
+    text-align: left;
+
+    color: white;
+
+    width: 100%;
+}
+.stadtgartenhero h1 {
+    margin: 0;
+   font-size: clamp(64px, 8vw, 64px);
+   transform: scaleY(0.9);
+    line-height: 0.95;
+    font-weight: 1000;
+    letter-spacing: -0.04em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.teebackground {
+    position: relative;
+    height: 80vh;
+    background: black;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    
+}
+
+.teebackground img {
+    position: absolute;
+
+    top: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 100%;
+    min-width: 2160px;
+    height: auto;
+
+    display: block;
+}
+.teehero {
+    position: absolute;
+
+    top: 93%;
+    left: 53%;
+
+    transform: translate(-50%, -50%);
+
+    z-index: 2;
+
+    text-align: left;
+
+    color: white;
+
+    width: 100%;
+}
+.teehero h1 {
+    margin: 0;
+   font-size: clamp(64px, 8vw, 64px);
+   transform: scaleY(0.9);
+    line-height: 0.95;
+    font-weight: 1000;
+    letter-spacing: -0.04em;
+}
