@@ -321,9 +321,22 @@ nav a {
 
 .weiter1 {
     text-align: center;
-    
-    background: whitesmoke;
+
+    background:
+
+        linear-gradient(
+
+            rgba(0, 0, 0, 0.45),
+
+            rgba(0, 0, 0, 0.45)
+
+        ),
+
+        url("images/Icheinfachverbesserlich33.jpg") center / cover no-repeat;
+
     padding: 100px 40px;
+
+    color: white;
 }
 
 .weiter1 h1 {
