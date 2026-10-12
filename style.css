@@ -426,7 +426,7 @@ Klangkoerper
 .klangbackground img {
     position: absolute;
 
-    top: 10%;
+    top: -20%;
     left: 50%;
     transform: translateX(-50%);
 
@@ -573,7 +573,7 @@ Klangkoerper
 .stadtgartenbackground img {
     position: absolute;
 
-    top: 0%;
+    top: -20%;
     left: 50%;
     transform: translateX(-50%);
 
@@ -635,7 +635,7 @@ Klangkoerper
 .teebackground img {
     position: absolute;
 
-    top: 0%;
+    top: -20%;
     left: 50%;
     transform: translateX(-50%);
 
