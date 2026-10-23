@@ -349,7 +349,7 @@ nav a {
 
 .weiter1 p {
     color: white;
-    font-size: clamp(12px, 2vw, 18px);
+    font-size: clamp(8px, 2vw, 18px);
     margin: 4% 24% 4% 24%
 }
 
