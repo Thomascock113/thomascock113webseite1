@@ -70,7 +70,7 @@ header {
 }
 
 .logo {
-    font-size: 20px;
+    font-size: clamp(10px, 2vw, 20px);
     font-weight: 600;
     color: white;
     text-decoration: none;
@@ -235,7 +235,7 @@ nav a {
 
     text-align: center;
 
-    font-size: clamp(24px, 7vw, 96px);
+    font-size: clamp(20px, 10vw, 95px);
     transform: scaleY(0.9);
     font-weight: 900;
     letter-spacing: -0.04em;
@@ -247,7 +247,7 @@ nav a {
     padding-right: 30px;
 
     /*font-size: 16px;*/
-    font-size: clamp(9px, 3vw, 16px);
+    font-size: clamp(3px, 3vw, 16px);
 }
 
 .details {
@@ -256,7 +256,7 @@ nav a {
     padding-left: 30px;
 
     /*font-size: 16px;*/
-    font-size: clamp(6px, 6vw, 16px);
+    font-size: clamp(3px, 3vw, 16px);
 }
 
 .hover-semester,
@@ -288,7 +288,7 @@ nav a {
 
     text-align: center;
 
-    font-size: clamp(24px, 7vw, 96px);
+    font-size: clamp(20px, 10vw, 95px);
     transform: scaleY(0.9);
     font-weight: 900;
     letter-spacing: -0.04em;
@@ -301,7 +301,7 @@ nav a {
     padding-left: 30px;
 
     /*font-size: 16px;*/
-    font-size: clamp(6px, 6vw, 16px);
+    font-size: clamp(3px, 3vw, 16px);
 }
 
 .project:hover .hover-semester,
@@ -344,10 +344,12 @@ nav a {
 
 .weiter1 h1 {
     color: white;
+    font-size: clamp(12px, 4vw, 18px);
 }
 
 .weiter1 p {
     color: white;
+    font-size: clamp(12px, 2vw, 18px);
     margin: 4% 24% 4% 24%
 }
 
